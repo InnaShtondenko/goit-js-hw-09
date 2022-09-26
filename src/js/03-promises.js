@@ -13,10 +13,7 @@ const promisesOpt = {
 
 function onFormSubmit(event) {
   event.preventDefault();
-
-  readPromises(promisesOpt);
-  const { delay, step, amount } = promisesOpt;
-
+  
     createPromise(position, delay)
       .then(({ position, delay }) => {
       Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
